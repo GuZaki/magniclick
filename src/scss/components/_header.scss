@@ -1,0 +1,45 @@
+@use '../colors' as *;
+
+.header {
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    background-color: $secondary-grey1;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    &__logo {
+        margin-right: auto;
+    }
+
+    &__navigation-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__navigation-link {
+
+        &:hover {
+            color: $primiry-pink;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+.icon:hover {
+    & > svg {
+        & path{
+            fill: $primiry-pink;
+        }
+    }
+}
+
