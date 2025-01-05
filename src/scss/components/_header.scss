@@ -4,26 +4,42 @@
     width: 100vw;
     position: fixed;
     z-index: 10;
-    background-color: $secondary-grey1;
-
+    color: $secondary-grey9;
+    font-weight: 500;
+    background-color: inherit;
+    
     &__inner {
         display: flex;
         align-items: center;
         gap: 40px;
-        padding: 40px;
+        padding: 37px 40px;
+        
+        @media(max-width: 768px){
+            padding: 25px;
+            gap: 25px;
+        }
     }
 
     &__logo {
         margin-right: auto;
+        flex-shrink: 0;
     }
 
     &__navigation-list {
         display: flex;
         gap: 40px;
+
+        @media(max-width: 1024px){
+            gap: 35px;
+        }
+
+        @media(max-width: 768px){
+            display: none;
+            flex-direction: column;
+        }
     }
 
     &__navigation-link {
-
         &:hover {
             color: $primiry-pink;
         }
@@ -32,14 +48,84 @@
     &__icons {
         display: flex;
         gap: 30px;
-    }
-}
 
-.icon:hover {
-    & > svg {
-        & path{
-            fill: $primiry-pink;
+        @media(max-width: 425px){
+            display: none;
         }
     }
 }
 
+
+.icon {
+    flex-shrink: 0;
+
+    &:hover {
+        & > svg {
+            & path{
+                fill: $primiry-pink;
+            }
+        }
+    }
+}
+
+/*бургер меню*/
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 25px;
+    flex-shrink: 0;
+    
+    @media(max-width: 768px){
+        display: block;
+    }
+}
+
+// .burger-checkbox {
+//     appearance: none;
+//     margin: 0; 
+// }
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: $primiry-black;
+  z-index: 10;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 $primiry-black;
+}
+
+.burger::after {
+  bottom: 0;
+  right: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+
+// .burger::before {
+//   top: 11px;
+//   transform: rotate(45deg);
+//   box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+//   transition: box-shadow .15s, top .3s, transform .3s .15s;
+// }
+
+// .burger::after {
+//   bottom: 11px;
+//   width: 100%;
+//   transform: rotate(-45deg);
+//   transition: bottom .3s, transform .3s .15s;
+// }
+
+// .burger-checkbox:checked ~ .nav-menu {
+//     transform: translateX(0);
+// }

@@ -67,11 +67,14 @@ iframe {
   border: none;
 }
 
+section {
+  padding: 50px 0;
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
-
 
 .container {
   max-width: 1360px;

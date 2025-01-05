@@ -1,0 +1,40 @@
+@use '../colors' as *;
+@use '../fonts' as *;
+
+.promo {
+
+    padding-top: 100px;
+
+    &__inner {
+        display: flex;
+        padding-left: 113px;
+    }
+
+    &__content {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__img {
+    }
+
+    &__bottom-menu {
+        font-family: $second-family;
+        background-color: $primiry-purple;
+        color: $primiry-white;
+    }
+}
+
+.bottom-menu {
+    display: flex;
+
+    &__item {
+    }
+
+    &__link {
+    }
+}
