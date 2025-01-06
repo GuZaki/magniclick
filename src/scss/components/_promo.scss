@@ -2,35 +2,55 @@
 @use '../fonts' as *;
 
 .promo {
-
     padding-top: 100px;
+    padding-bottom: 252px;
+    background: $secondary-grey1 url('../images/promo/bunner.jpg') ;
+    background-repeat: no-repeat;
+    background-position: right;
 
     &__inner {
+        position: relative;
         display: flex;
-        padding-left: 113px;
     }
 
     &__content {
+        margin-top: 88px;
+        flex-basis: 388px;
     }
 
     &__title {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.3125;
+        letter-spacing: 0.02em;
+        margin-bottom: 64px;        
     }
 
     &__text {
+        letter-spacing: 0.02em;
+        color: $secondary-grey7;
     }
 
     &__img {
+        flex-basis: 768px;
     }
 
-    &__bottom-menu {
-        font-family: $second-family;
-        background-color: $primiry-purple;
-        color: $primiry-white;
+    &__bottom-menu {       
+        position: absolute;
+        bottom: -252px;
+        right: 0;
     }
 }
 
 .bottom-menu {
     display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 24px 120px 48px;
+    background-color: $primiry-purple;
+    color: $primiry-white;
+    font-family: $second-family;
 
     &__item {
     }
