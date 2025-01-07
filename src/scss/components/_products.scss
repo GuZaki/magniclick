@@ -1,0 +1,39 @@
+@use '../colors' as *;
+
+.products {
+    padding-top: 100px;
+
+    &__title {
+        margin-bottom: 56px;
+    }
+
+    &__content {
+        display: grid;
+        gap: 28px 24px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__card {
+        &:first-child{
+            grid-row: span 2;
+        }
+        &-link {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &-img {
+            margin-bottom: 12px;
+        }
+        
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.22222;
+        }
+    }
+    
+}
+

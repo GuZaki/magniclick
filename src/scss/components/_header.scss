@@ -3,11 +3,11 @@
 .header {
     width: 100vw;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     color: $secondary-grey9;
     font-weight: 500;
     background-color: $secondary-grey1;
-    
+
     &__inner {
         display: flex;
         align-items: center;
@@ -54,7 +54,6 @@
         }
     }
 }
-
 
 .icon {
     flex-shrink: 0;

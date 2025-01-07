@@ -19,21 +19,29 @@
     }
 
     &__title {
+        position: relative;
         font-family: $second-family;
         font-weight: 700;
         font-size: 48px;
         line-height: 1.3125;
         letter-spacing: 0.02em;
-        margin-bottom: 64px;        
+        margin-bottom: 64px;  
+        
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 1px;
+            bottom: -25%;
+            left: 0;
+            background-color: $secondary-grey4;
+        }
+
     }
 
     &__text {
         letter-spacing: 0.02em;
         color: $secondary-grey7;
-    }
-
-    &__img {
-        flex-basis: 768px;
     }
 
     &__bottom-menu {       
@@ -45,16 +53,72 @@
 
 .bottom-menu {
     display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 24px 120px 48px;
+    align-items: flex-start;
+    padding: 24px 70px 48px;
     background-color: $primiry-purple;
     color: $primiry-white;
     font-family: $second-family;
 
     &__item {
+        max-width: 215px;
+        height: 120px;
+        background-repeat: no-repeat;
+        background-position: 33% 0%;
+
+        &:not(:nth-child(1)) {
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        &:nth-child(1){
+            background-image: url('../images/promo/team.svg');
+
+            &:hover {
+                background-image: url('../images/promo/team-hover.svg');
+            }
+        } 
+
+        &:nth-child(2){
+            background-image: url('../images/promo/study.svg');
+
+            &:hover {
+                background-image: url('../images/promo/study-hover.svg');
+            }
+        } 
+
+        &:nth-child(3){
+            background-image: url('../images/promo/home.svg');
+
+            &:hover {
+                background-image: url('../images/promo/home-hover.svg');
+            }
+        } 
+
+        &:nth-child(4){
+            background-image: url('../images/promo/workplace.svg');
+
+            &:hover {
+                background-image: url('../images/promo/workplace-hover.svg');
+            }
+        }
     }
 
     &__link {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 50px;
+        font-size: 18px;
+        line-height: 1.22222;
+        letter-spacing: 0.05em;
+        height: 100%;
+        
+        &:hover {
+            opacity: 0.6;
+        }
+
+        & span {
+            margin-top: 75px;
+        }
     }
 }
